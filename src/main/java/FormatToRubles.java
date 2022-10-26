@@ -12,10 +12,13 @@ public class FormatToRubles {
 
         if (rubleOrRubles <= 1) {
             checkMessage = "С человека по %.2f рубль";
+            checkMessage = String.format(checkMessage,rubbles );
         } else if (rubleOrRubles < 9) {
             checkMessage = "С человека по %.2f рубля";
+            checkMessage = String.format(checkMessage,rubbles );
         } else if (rubleOrRubles >= 10) {
             checkMessage = "С человека по %.2f рублей";
+            checkMessage = String.format(checkMessage,rubbles );
         }
         return checkMessage;
     }

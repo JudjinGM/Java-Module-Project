@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
-public class AskPeople {
+public class AskInfo {
     int peopleAmount;
     double checkCount;
     StringBuilder productList;
 
-    AskPeople() {
+    AskInfo() {
         productList = new StringBuilder();
     }
 
@@ -61,7 +61,7 @@ public class AskPeople {
                     exceptionHappened = true;
                 }
                 if (price >= 0 && !exceptionHappened){
-                    checkCount = checkCount + price;
+                    checkCount += price;
                     break;
                 }
                 else if (!exceptionHappened) {

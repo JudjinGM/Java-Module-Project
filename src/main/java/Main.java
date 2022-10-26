@@ -2,24 +2,24 @@ public class Main {
 
     public static void main(String[] args) {
         // Собираю вводные данные
-        AskPeople askPeople = new AskPeople();
+        AskInfo askPeople = new AskInfo();
         askPeople.askPeopleAmount();
         askPeople.addProductsNameAndPrice();
 
         //Произвожу вычисления
         Calculator calculator = new Calculator(askPeople.checkCount, askPeople.peopleAmount);
-        double check = calculator.calculation();
+        double calculatedCheck = calculator.division();
 
         //Вывожу список товаров
         ShowProductList showProductList = new ShowProductList(askPeople.productList);
         showProductList.printProductList();
 
         //Форматирую окончание слова рубль для сообщения
-        FormatToRubles formatToRubles = new FormatToRubles(check);
+        FormatToRubles formatToRubles = new FormatToRubles(calculatedCheck);
         String checkMessage = formatToRubles.formatRubbles();
 
         //Вывожу сколько должен заплатить каждый гость
-        ShowFinalCheck showFinalCheck = new ShowFinalCheck(checkMessage, check);
-        showFinalCheck.PrintFinalCheck();
+        ShowFinalCheck showFinalCheck = new ShowFinalCheck(checkMessage);
+        showFinalCheck.printFinalCheck();
     }
 }

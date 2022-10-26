@@ -7,7 +7,7 @@ public class Calculator {
         this.divider = divider;
     }
 
-    double calculation() {
+    double division() {
         return value / divider;
     }
 }
